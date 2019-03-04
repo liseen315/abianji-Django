@@ -8,9 +8,13 @@
     <title>阿比安吉</title>
 </head>
 <body class="abianji-root">
-    {% block topnav %}
-    {% endblock topnav %}
-    {% block header %}
-    {% endblock header %}
+    {% include "topnav" %}
+    {% include "header" %}
+    <div class="main container">
+        {% block main %}
+        
+        {% endblock main %}
+    </div>
+    {% include "footer" %}
 </body>
 </html>
