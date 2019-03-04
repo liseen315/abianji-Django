@@ -4,9 +4,8 @@
   "description": "Abianji is a blog system with Django",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development gulp",
-    "devs": "cross-env NODE_ENV=development gulp dev-s",
-    "release": "cross-env NODE_ENV=production gulp release",
+    "serve": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp release",
     "dll": "cross-env  NODE_ENV=production webpack --config webpack.dll.config.js",
     "del": "gulp del"
   },
