@@ -1,15 +1,17 @@
 # abianji
 Abianji is a blog system with Django
 
-## require version
+## datebase
 
-
+```
+$ pipenv install mysqlclient
+```
 
 ## Installation
 ```
 $ git clone git@github.com:liseen315/abianji.git
 $ cd abianji
-$ pipenv install --dev
+$ pipenv install
 $ pipenv shell
 $ python manage.py runserver 
 ```
