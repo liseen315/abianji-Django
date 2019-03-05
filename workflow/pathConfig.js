@@ -1,7 +1,7 @@
 const pathConfig = {
-  distRoot: 'blog/static/',
+  distRoot: 'blog/',
   sourceRoot: 'src/',
-  viewPath: 'application/views/**/*.phtml',
+  viewPath: 'templates/**/*.html',
   jsPath: 'src/scripts/**/*.js',
   scssPath: 'src/scss/**/*.scss',
   imgPath: 'src/images/**/*'

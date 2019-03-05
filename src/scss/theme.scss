@@ -1,0 +1,32 @@
+@import "normalize.css";
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import "./_variables.scss";
+
+.abianji-root{
+  background-color: $page-background-color;
+  font-family: $content-font;
+  color: $text-color;
+  font-size: 1.6em;
+
+  h1, h2, h3, h4, h5, h6, .title, .subtitle {
+    font-family: $headline-font;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+      color: $highlight-color;
+    }
+  }
+
+  .container{
+    width: $site-width;
+    max-width: 100%;
+  }
+
+  @import "topnav";
+  @import "header";
+}

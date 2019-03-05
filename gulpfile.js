@@ -27,5 +27,5 @@ gulp.task('del', function () {
 
 gulp.task('release', ['hash:css', 'hash:js'])
 
-gulp.task('default', ['image', 'scss', 'watch', 'watchJS'])
+gulp.task('default', ['image', 'scss', 'watch','watchJS'])
 
