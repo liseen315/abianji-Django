@@ -42,7 +42,7 @@ class Article(models.Model):
     modified_time = models.DateTimeField()
     excerpt = models.CharField(max_length=200)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    tags = models.ManyToManyField(Tag, blank=True,null=True)
+    tags = models.ManyToManyField(Tag, blank=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     type = models.OneToOneField(ArticleType,on_delete=models.CASCADE)
 
