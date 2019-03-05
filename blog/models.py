@@ -21,6 +21,8 @@ class Setting(BaseModel):
 
     class Meta:
         verbose_name = '网站配置'
+        # 不写这段就会在网站配置后面多了个s
+        verbose_name_plural = verbose_name
 
     def __str__(self):
         return self.sitename
