@@ -1,7 +1,14 @@
 # abianji
 Abianji is a blog system with Django
 
-## datebase
+## 创建数据库
+
+```mysql
+CREATE DATABASE `abianji` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLL
+ATE utf8mb4_unicode_ci */;
+```
+
+## 安装驱动
 
 ```
 $ pipenv install mysqlclient

@@ -8,6 +8,10 @@ class BaseModel(models.Model):
     create_time = models.DateTimeField('创建时间',default=now)
     last_mod_time = models.DateTimeField('修改时间',default=now)
 
+    # 需要加上这个抽象Meta字段否则会在数据库内创建对应的表
+    class Meta:
+        abstract = True
+
 class Setting(BaseModel):
     sitename = models.CharField("网站名称",max_length=100,default='')
     site_description = models.CharField("网站描述",max_length=200,default='')
