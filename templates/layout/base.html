@@ -13,12 +13,16 @@
     <link rel="stylesheet" href="static/styles/theme.css">
 </head>
 <body class="abianji-root">
-    {% include "topnav.html" %}
-    {% include "header.html" %}
+    {% block topnav %}
+    {% endblock %}
+    {% block header %}
+    {% endblock %}
     <div class="main container">
         {% block main %}
-        
+
         {% endblock %}
     </div>
+    {% block footer %}
+    {% endblock %}
 </body>
 </html>

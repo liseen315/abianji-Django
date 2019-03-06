@@ -11,3 +11,6 @@ class AbianjiAdminSite(AdminSite):
 
 admin_site = AbianjiAdminSite(name='admin')
 admin_site.register(Setting,BlogSettingAdmin)
+admin_site.register(Article,ArticleAdmin)
+admin_site.register(Category,CategoryAdmin)
+admin_site.register(Tag,TagAdmin)

@@ -14,6 +14,11 @@ ATE utf8mb4_unicode_ci */;
 $ pipenv install mysqlclient
 ```
 
+## 运行前端打包
+```
+$ npm run serve
+```
+
 ## Installation
 ```
 $ git clone git@github.com:liseen315/abianji.git
