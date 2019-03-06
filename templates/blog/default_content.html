@@ -2,7 +2,7 @@
     <h3><a href="#">{{ articleItem.title }}</a></h3>
     <div class="meta">
         <span class="date moment">{{ articleItem.pub_time }}</span>
-        <span class="categories"><a href="#">Code</a></span>
+        <span class="categories"><a href="#">{{ articleItem.category.name }}</a></span>
         <span class="author">Liseen</span>
     </div>
     {{ articleItem.body }}
