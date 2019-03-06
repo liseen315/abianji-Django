@@ -2,6 +2,7 @@ import logging
 from django.db import models
 from django.utils.timezone import now
 from django.core.exceptions import ValidationError
+
 class BaseModel(models.Model):
     '''基础模型'''
     id = models.AutoField(primary_key=True)
