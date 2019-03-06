@@ -9,7 +9,9 @@
 {% block main %}
     {% for articleItem in article_list %}
         <div class="article-wrapper u-cf">
-        sdfsdf
+            {% if articleItem.article_type == 'article' %}
+                {% include 'blog/article.html' %}
+            {% endif %}
         </div>
     {% endfor %}
 {% endblock %}
