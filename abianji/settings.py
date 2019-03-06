@@ -51,19 +51,31 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'abianji.urls'
 
+CONTEXT_PROCESSORS = [
+    'django.template.context_processors.debug',
+    'django.template.context_processors.request',
+    'django.contrib.auth.context_processors.auth',
+    'django.contrib.messages.context_processors.messages',
+    'blog.context_processors.seo_processor',
+
+]
+
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.jinja2.Jinja2',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {'context_processors': CONTEXT_PROCESSORS, },
+    },
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2'
+        ,
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-                'blog.context_processors.seo_processor'
-            ],
+            'context_processors': CONTEXT_PROCESSORS,
             'environment': 'abianji.jinja2.environment'
         },
     },

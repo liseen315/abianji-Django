@@ -1,5 +1,6 @@
 from django.contrib.admin import AdminSite
 from blog.admin import *
+
 class AbianjiAdminSite(AdminSite):
     site_header = 'Abianji 管理后台'
     site_title = '阿比安吉 admin'
