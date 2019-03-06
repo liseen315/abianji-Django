@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from abianji.admin_site import admin_site
 
+handler404 = 'blog.views.page_not_found_view'
+handler500 = 'blog.views.server_error_view'
+handler403 = 'blog.views.permission_denied_view'
+
 urlpatterns = [
     url(r'^admin/', admin_site.urls),
     url('', include('blog.urls', namespace='blog'))
