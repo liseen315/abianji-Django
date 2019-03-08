@@ -1,0 +1,13 @@
+{% if articleItem.tags.count() > 0 %}
+    <div class="footer">
+        <div class="tags">
+            <i class="fa fa-tags"></i>
+            <div class="links">
+                {% for tagitem in articleItem.tags.all() %}
+                    <a href="#">{{ tagitem.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+

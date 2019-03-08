@@ -78,6 +78,7 @@ class Article(BaseModel):
     title = models.CharField('标题',max_length=200,unique=True)
     body = models.TextField('正文')
     pub_time = models.DateTimeField('发布时间',blank=True,null=True)
+    mod_time = models.DateTimeField('修改时间',blank=True,null=True)
     article_type = models.CharField('类型',max_length=10,choices=TYPE,default='article')
     views = models.PositiveIntegerField('浏览量',default=0)
     category = models.ForeignKey('Category',verbose_name='分类',on_delete=models.CASCADE)
