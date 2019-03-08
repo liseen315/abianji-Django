@@ -7,8 +7,8 @@ from django.core.exceptions import ValidationError
 class BaseModel(models.Model):
     '''基础模型'''
     id = models.AutoField(primary_key=True)
-    create_time = models.DateTimeField('创建时间', default=now)
-    last_mod_time = models.DateTimeField('修改时间', default=now)
+    # create_time = models.DateTimeField('创建时间', default=now)
+    # last_mod_time = models.DateTimeField('修改时间', default=now)
 
     # 需要加上这个抽象Meta字段否则会在数据库内创建对应的表
     class Meta:
