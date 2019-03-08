@@ -10,6 +10,8 @@ django = "==2.1.7"
 mysqlclient = "*"
 django-redis = "*"
 jinja2 = "*"
+pygments = "*"
+markdown2 = "*"
 
 [requires]
 python_version = "3.7"

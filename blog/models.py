@@ -1,6 +1,9 @@
 import logging
+from abc import abstractmethod
+
 from django.db import models
 from django.utils.timezone import now
+from django.urls import reverse
 from django.core.exceptions import ValidationError
 
 
@@ -13,6 +16,11 @@ class BaseModel(models.Model):
     # 需要加上这个抽象Meta字段否则会在数据库内创建对应的表
     class Meta:
         abstract = True
+
+    # 定义抽象方法用于查找url
+    @abstractmethod
+    def get_absolute_url(self):
+        pass
 
 
 class Setting(BaseModel):
@@ -77,7 +85,7 @@ class Article(BaseModel):
     )
     title = models.CharField('标题',max_length=200,unique=True)
     body = models.TextField('正文')
-    pub_time = models.DateTimeField('发布时间',blank=True,null=True)
+    pub_time = models.DateTimeField('发布时间',blank=True,null=True,default=now)
     mod_time = models.DateTimeField('修改时间',blank=True,null=True)
     article_type = models.CharField('类型',max_length=10,choices=TYPE,default='article')
     views = models.PositiveIntegerField('浏览量',default=0)
@@ -92,3 +100,13 @@ class Article(BaseModel):
         verbose_name = "文章"
         verbose_name_plural = verbose_name
         get_latest_by = 'id'
+
+    def get_absolute_url(self):
+        # 名字为路由内定义的name
+        return reverse('blog:detailbyid',kwargs={
+            'article_id': self.id,
+            'year': self.pub_time.year,
+            'month': self.pub_time.month,
+            'day': self.pub_time.day
+        })
+

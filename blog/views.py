@@ -33,6 +33,12 @@ class IndexView(ArticleListView):
         article_list = Article.objects.all()
         return article_list
 
+"""
+文章详情
+"""
+class ArticleDetailView(DetailView):
+    pass
+
 def page_not_found_view(request, exception, template_name='error.html'):
     if exception:
         logger.error(exception)
