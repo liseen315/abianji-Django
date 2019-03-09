@@ -20,6 +20,12 @@ class ArticleListView(ListView):
     paginate_by = settings.PAGINATE_BY
     page_kwarg = 'page'
 
+    @property
+    def page_number(self):
+        page_kwarg = self.page_kwarg
+        page = self.kwargs.get(page_kwarg) or self.request.GET.get(page_kwarg) or 1
+        return page
+
     # 子类覆盖方法用于获取文章列表
     def get_articleListData(self):
         pass

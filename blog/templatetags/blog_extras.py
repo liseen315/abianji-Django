@@ -1,8 +1,12 @@
 import logging
 from django import template
+from django.utils.safestring import mark_safe
+from django.utils.encoding import force_text
 from django.template.defaultfilters import stringfilter
 from django.conf import settings
 from django.urls import reverse
+
+import markdown2
 
 logger = logging.getLogger(__name__)
 
@@ -72,3 +76,17 @@ def load_pagination_info(page_obj):
         'next_url': next_url,
         'page_obj': page_obj
     }
+
+
+@register.filter(is_safe=True)
+@stringfilter
+def custom_markdown(value):
+
+    """
+    markdown
+    :param value:
+    :return:
+    """
+    return mark_safe(markdown2.markdown(force_text(value),
+                                        extras=["fenced-code-blocks", "cuddled-lists", "metadata", "tables",
+                                                "spoiler"]))

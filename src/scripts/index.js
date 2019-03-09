@@ -1,1 +1,2 @@
-console.log('-1111')
+import hljs from 'highlight.js';
+hljs.initHighlightingOnLoad();

@@ -1,6 +1,7 @@
 @import "normalize.css";
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "skeleton.css";
+@import "highlight.js/styles/darkula.css";
 @import "./_variables.scss";
 
 .abianji-root{
@@ -27,6 +28,11 @@
     width: $site-width;
     max-width: 100%;
   }
+
+      .hljs {
+        padding: 0.75em;
+        font-size: 0.9em;
+    }
 
   @import "topnav";
   @import "header";
