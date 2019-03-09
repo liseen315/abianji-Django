@@ -12,6 +12,8 @@ django-redis = "*"
 jinja2 = "*"
 pygments = "*"
 markdown2 = "*"
+django-suit = "*"
+django-mdeditor = "*"
 
 [requires]
 python_version = "3.7"

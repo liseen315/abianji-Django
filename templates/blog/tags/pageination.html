@@ -1,0 +1,8 @@
+<div class="paginator">
+    {% if page_obj.has_previous and previous_url %}
+        <a href="{{ previous_url }}" class="older"><i class="fa fa-angle-double-left"></i>olderPosts</a>
+    {% endif %}
+    {% if page_obj.has_next and next_url %}
+        <a href="{{ next_url }}" class="newer">newerPosts<i class="fa fa-angle-double-right"></i></a>
+    {% endif %}
+</div>

@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'suit',
     'django.contrib.admin',
     # 'django.contrib.admin.apps.SimpleAdminConfig',
     'django.contrib.auth',
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'mdeditor'
 ]
 
 MIDDLEWARE = [
@@ -148,3 +150,6 @@ CACHES = {
 # 格式化配置
 TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 DATE_TIME_FORMAT = '%Y-%m-%d'
+
+# 分页
+PAGINATE_BY = 3

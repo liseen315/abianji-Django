@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.conf import settings
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from .models import Article, Category, Tag
@@ -15,6 +16,9 @@ class ArticleListView(ListView):
 
     # context_object_name属性用于给上下文变量取名（在模板中使用该名字）
     context_object_name = 'article_list'
+
+    paginate_by = settings.PAGINATE_BY
+    page_kwarg = 'page'
 
     # 子类覆盖方法用于获取文章列表
     def get_articleListData(self):
