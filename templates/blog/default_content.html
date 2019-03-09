@@ -7,5 +7,10 @@
         <span class="categories"><a href="#">{{ article.category.name }}</a></span>
         <span class="author">Liseen</span>
     </div>
-    {{ article.body }}
+    {% if isindex %}
+        {{ article.body|truncatechars_content }}
+        <a href="{{ article.get_absolute_url }}" class="more">Continue reading</a>
+    {% else %}
+        {{ article.body }}
+    {% endif %}
 </div>
