@@ -17,11 +17,11 @@ class ArticleListView(ListView):
     context_object_name = 'article_list'
 
     # 子类覆盖方法用于获取文章列表
-    def get_articalListData(self):
+    def get_articleListData(self):
         pass
 
     def get_queryset(self):
-        value = self.get_articalListData()
+        value = self.get_articleListData()
         return value
 
 """
@@ -29,7 +29,7 @@ class ArticleListView(ListView):
 """
 class IndexView(ArticleListView):
 
-    def get_articalListData(self):
+    def get_articleListData(self):
         article_list = Article.objects.all()
         return article_list
 
@@ -37,7 +37,11 @@ class IndexView(ArticleListView):
 文章详情
 """
 class ArticleDetailView(DetailView):
-    pass
+    template_name = 'blog/article_detail.html'
+    model = Article
+    pk_url_kwarg = 'article_id'
+    context_object_name = 'article'
+
 
 def page_not_found_view(request, exception, template_name='error.html'):
     if exception:

@@ -1,0 +1,13 @@
+{% extends 'layout/base.html' %}
+{% block topnav %}
+    {% include 'layout/topnav.html' %}
+{% endblock %}
+{% block header %}
+    {% include 'layout/header.html' %}
+{% endblock %}
+
+{% block main %}
+    <div class="article-wrapper u-cf">
+        {% include 'blog/article.html' %}
+    </div>
+{% endblock %}
