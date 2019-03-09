@@ -1,0 +1,5 @@
+{% if article.article_type == 'A' %}
+    {% include 'blog/article.html' %}
+{% elif article.article_type == 'C' %}
+    {% include 'blog/code.html' %}
+{% endif %}

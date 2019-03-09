@@ -145,3 +145,6 @@ CACHES = {
         }
     }
 }
+# 格式化配置
+TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
+DATE_TIME_FORMAT = '%Y-%m-%d'

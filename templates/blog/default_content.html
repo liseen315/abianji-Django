@@ -1,7 +1,9 @@
+{# 加载模板tag #}
+{% load blog_extras %}
 <div class="content">
     <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
     <div class="meta">
-        <span class="date moment">{{ article.pub_time }}</span>
+        <span class="date moment">{% datetimeformat article.pub_time %}</span>
         <span class="categories"><a href="#">{{ article.category.name }}</a></span>
         <span class="author">Liseen</span>
     </div>

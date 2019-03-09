@@ -1,4 +1,5 @@
 {% extends 'layout/base.html' %}
+{% load blog_extras %}
 {% block topnav %}
     {% include 'layout/topnav.html' %}
 {% endblock %}
@@ -8,10 +9,6 @@
 
 {% block main %}
     <div class="article-wrapper u-cf">
-        {% if article.article_type == 'A' %}
-            {% include 'blog/article.html' %}
-        {% elif article.article_type == 'C' %}
-            {% include 'blog/code.html' %}
-        {% endif %}
+        {% load_article_byType article True %}
     </div>
 {% endblock %}
