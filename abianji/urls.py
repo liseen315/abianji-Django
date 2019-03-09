@@ -14,6 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.conf import settings
+from django.conf.urls.static import static
 from abianji.admin_site import admin_site
 
 handler404 = 'blog.views.page_not_found_view'
@@ -22,5 +24,10 @@ handler403 = 'blog.views.permission_denied_view'
 
 urlpatterns = [
     url(r'^admin/', admin_site.urls),
-    url('', include('blog.urls', namespace='blog'))
+    url('', include('blog.urls', namespace='blog')),
+    url(r'mdeditor/', include('mdeditor.urls'))
 ]
+
+if settings.DEBUG:
+    # static files (images, css, javascript, etc.)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

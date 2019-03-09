@@ -81,7 +81,6 @@ def load_pagination_info(page_obj):
 @register.filter(is_safe=True)
 @stringfilter
 def custom_markdown(value):
-
     """
     markdown
     :param value:
