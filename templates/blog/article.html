@@ -1,6 +1,8 @@
-<a href="#" class="bubble">
-    <i class="fa fa-fw fa-pen"></i>
-</a>
+{% block ar_icon %}
+    <a href="{{ article.get_absolute_url() }}" class="bubble">
+        <i class="fa fa-fw fa-pen"></i>
+    </a>
+{% endblock %}
 <article class="default article">
     {% include 'blog/default_content.html' %}
     {% include 'blog/article_meta.html' %}
