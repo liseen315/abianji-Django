@@ -1,9 +1,9 @@
-{% if article.tags.count() > 0 %}
+{% if article.tags.count > 0 %}
     <div class="footer">
         <div class="tags">
             <i class="fa fa-tags"></i>
             <div class="links">
-                {% for tagitem in article.tags.all() %}
+                {% for tagitem in article.tags.all %}
                     <a href="#">{{ tagitem.name }}</a>
                 {% endfor %}
             </div>

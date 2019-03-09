@@ -29,8 +29,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # 'django.contrib.admin',
-    'django.contrib.admin.apps.SimpleAdminConfig',
+    'django.contrib.admin',
+    # 'django.contrib.admin.apps.SimpleAdminConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -63,22 +63,22 @@ CONTEXT_PROCESSORS = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {'context_processors': CONTEXT_PROCESSORS, },
     },
-    {
-        'BACKEND': 'django.template.backends.jinja2.Jinja2'
-        ,
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
-        ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': CONTEXT_PROCESSORS,
-            'environment': 'abianji.jinja2.environment'
-        },
-    },
+    # {
+    #     'BACKEND': 'django.template.backends.jinja2.Jinja2'
+    #     ,
+    #     'DIRS': [
+    #         os.path.join(BASE_DIR, 'templates'),
+    #     ],
+    #     'APP_DIRS': True,
+    #     'OPTIONS': {
+    #         'context_processors': CONTEXT_PROCESSORS,
+    #         'environment': 'abianji.jinja2.environment'
+    #     },
+    # },
 ]
 
 WSGI_APPLICATION = 'abianji.wsgi.application'
