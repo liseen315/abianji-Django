@@ -5,7 +5,7 @@ from django.utils.encoding import force_text
 from django.template.defaultfilters import stringfilter
 from django.conf import settings
 from django.urls import reverse
-
+from blog.models import Category,Article
 import markdown2
 
 logger = logging.getLogger(__name__)
@@ -75,6 +75,22 @@ def load_pagination_info(page_obj):
         'previous_url': previous_url,
         'next_url': next_url,
         'page_obj': page_obj
+    }
+
+
+@register.inclusion_tag('blog/tags/categories.html')
+def load_categories():
+    categories = Category.objects.all()
+    return {
+        'categories': categories
+    }
+
+
+@register.inclusion_tag('blog/tags/recent_posts.html')
+def load_recentposts():
+    recent_articles = Article.objects.all()[:5]
+    return {
+        'recent_articles': recent_articles
     }
 
 

@@ -1,0 +1,8 @@
+<div class="recent-posts">
+    <strong>Latest posts</strong>
+    <ul>
+        {% for article in recent_articles %}
+            <li><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

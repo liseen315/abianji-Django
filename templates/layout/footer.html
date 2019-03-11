@@ -1,17 +1,8 @@
+{% load blog_extras %}
 <footer>
     <div class="container">
-        <div class="recent-posts">
-            <strong>Latest posts</strong>
-            <ul>
-                <li><a href="#">hehehe</a></li>
-            </ul>
-        </div>
-        <div class="categories">
-            <strong>Categories</strong>
-            <ul>
-                <li><a href="#">?????</a></li>
-            </ul>
-        </div>
+        {% load_recentposts %}
+        {% load_categories %}
         <div class="right">
             <div class="external-profiles">
                 <strong>Social media</strong>
