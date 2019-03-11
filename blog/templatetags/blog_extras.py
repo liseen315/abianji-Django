@@ -81,6 +81,7 @@ def load_pagination_info(page_obj):
 @register.inclusion_tag('blog/tags/categories.html')
 def load_categories():
     categories = Category.objects.all()
+
     return {
         'categories': categories
     }

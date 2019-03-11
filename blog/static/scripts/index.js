@@ -1395,11 +1395,25 @@ eval("module.exports = function (hljs) {\n  var STRING = {\n    className: 'stri
 
 /***/ }),
 
+/***/ "../../node_modules/jquery/dist/jquery.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = (__webpack_require__(\"dll-reference vendors_3eeb8e2048ee3d6136dc\"))(10);//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi4vLi4vbm9kZV9tb2R1bGVzL2pxdWVyeS9kaXN0L2pxdWVyeS5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy9kZWxlZ2F0ZWQgLi9ub2RlX21vZHVsZXMvanF1ZXJ5L2Rpc3QvanF1ZXJ5LmpzIGZyb20gZGxsLXJlZmVyZW5jZSB2ZW5kb3JzXzNlZWI4ZTIwNDhlZTNkNjEzNmRjPzI2NGMiXSwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSAoX193ZWJwYWNrX3JlcXVpcmVfXyhcImRsbC1yZWZlcmVuY2UgdmVuZG9yc18zZWViOGUyMDQ4ZWUzZDYxMzZkY1wiKSkoMTApOyJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///../../node_modules/jquery/dist/jquery.js\n");
+
+/***/ }),
+
 /***/ "./index.js":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var highlight_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(\"../../node_modules/highlight.js/lib/index.js\");\n/* harmony import */ var highlight_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(highlight_js__WEBPACK_IMPORTED_MODULE_0__);\n\nhighlight_js__WEBPACK_IMPORTED_MODULE_0___default.a.initHighlightingOnLoad();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9pbmRleC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2luZGV4LmpzPzQxZjUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGhsanMgZnJvbSAnaGlnaGxpZ2h0LmpzJztcbmhsanMuaW5pdEhpZ2hsaWdodGluZ09uTG9hZCgpOyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFDQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./index.js\n");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var highlight_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(\"../../node_modules/highlight.js/lib/index.js\");\n/* harmony import */ var highlight_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(highlight_js__WEBPACK_IMPORTED_MODULE_0__);\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\n\n\nvar Abianji =\n/*#__PURE__*/\nfunction () {\n  function Abianji() {\n    _classCallCheck(this, Abianji);\n\n    this.J_toggler = $('#J_toggler');\n    this.J_nav = $('#J_nav');\n    this.init();\n  }\n\n  _createClass(Abianji, [{\n    key: \"init\",\n    value: function init() {\n      this.J_toggler.on('click', function (event) {\n        $(\"nav\").slideToggle();\n      });\n    }\n  }]);\n\n  return Abianji;\n}();\n\nnew Abianji();\nhighlight_js__WEBPACK_IMPORTED_MODULE_0___default.a.initHighlightingOnLoad();\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(\"../../node_modules/jquery/dist/jquery.js\")))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9pbmRleC5qcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2luZGV4LmpzPzQxZjUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGhsanMgZnJvbSAnaGlnaGxpZ2h0LmpzJ1xuXG5jbGFzcyBBYmlhbmppIHtcbiAgY29uc3RydWN0b3IgKCkge1xuICAgIHRoaXMuSl90b2dnbGVyID0gJCgnI0pfdG9nZ2xlcicpXG4gICAgdGhpcy5KX25hdiA9ICQoJyNKX25hdicpXG5cbiAgICB0aGlzLmluaXQoKVxuICB9XG5cbiAgaW5pdCgpIHtcbiAgICB0aGlzLkpfdG9nZ2xlci5vbignY2xpY2snLGV2ZW50ID0+IHtcbiAgICAgICQoXCJuYXZcIikuc2xpZGVUb2dnbGUoKTtcbiAgICB9KVxuICB9XG59XG5cbm5ldyBBYmlhbmppKClcblxuaGxqcy5pbml0SGlnaGxpZ2h0aW5nT25Mb2FkKClcblxuIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7OztBQUNBO0FBQUE7QUFDQTtBQUFBO0FBQ0E7QUFFQTtBQUNBO0FBQ0E7OztBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7Ozs7OztBQUdBO0FBRUE7QSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./index.js\n");
+
+/***/ }),
+
+/***/ "dll-reference vendors_3eeb8e2048ee3d6136dc":
+/***/ (function(module, exports) {
+
+eval("module.exports = vendors_3eeb8e2048ee3d6136dc;//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZGxsLXJlZmVyZW5jZSB2ZW5kb3JzXzNlZWI4ZTIwNDhlZTNkNjEzNmRjLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL2V4dGVybmFsIFwidmVuZG9yc18zZWViOGUyMDQ4ZWUzZDYxMzZkY1wiP2Y3MjAiXSwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSB2ZW5kb3JzXzNlZWI4ZTIwNDhlZTNkNjEzNmRjOyJdLCJtYXBwaW5ncyI6IkFBQUEiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///dll-reference vendors_3eeb8e2048ee3d6136dc\n");
 
 /***/ })
 
