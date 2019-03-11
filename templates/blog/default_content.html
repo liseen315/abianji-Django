@@ -1,4 +1,3 @@
-{# 加载模板tag #}
 {% load blog_extras %}
 <div class="content">
     <h3><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h3>
@@ -7,7 +6,8 @@
         <span class="categories"><a href="{{ article.category.get_absolute_url }}">{{ article.category.name }}</a></span>
         <span class="author">Liseen</span>
     </div>
-    {% if isindex %}
+    {#    奇怪这里读不到全局变量？#}
+    {% if isindex and article.body|length > 300 %}
         {{ article.body|custom_markdown|truncatechars_content }}
         <a href="{{ article.get_absolute_url }}" class="more">Continue reading</a>
     {% else %}

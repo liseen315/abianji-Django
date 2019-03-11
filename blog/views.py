@@ -63,6 +63,8 @@ class ArticleDetailView(DetailView):
 """
 分类详情
 """
+
+
 class CategoryDetailView(ArticleListView):
     page_type = "分类目录归档"
 
@@ -73,6 +75,23 @@ class CategoryDetailView(ArticleListView):
         categoryname = category.name
         self.categoryname = categoryname
         article_list = Article.objects.filter(category__name=categoryname)
+        return article_list
+
+
+"""
+标签详情
+"""
+
+
+class TagDetailView(ArticleListView):
+    page_type = '分类标签归档'
+
+    def get_queryset_data(self):
+        slug = self.kwargs['tag_name']
+        tag = get_object_or_404(Tag, slug=slug)
+        tag_name = tag.name
+        self.name = tag_name
+        article_list = Article.objects.filter(tags__name=tag_name)
         return article_list
 
 

@@ -68,6 +68,7 @@ class Category(BaseModel):
 
 class Tag(BaseModel):
     name = models.CharField('标签', max_length=30, unique=True)
+    slug = models.SlugField(default='no-slug', max_length=60, blank=True)
 
     class Meta:
         # 默认以name排序
@@ -77,6 +78,9 @@ class Tag(BaseModel):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('blog:tag_detail', kwargs={'tag_name': self.slug})
 
 
 class Article(BaseModel):
