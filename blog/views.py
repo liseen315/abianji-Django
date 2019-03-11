@@ -63,8 +63,6 @@ class ArticleDetailView(DetailView):
 """
 分类详情
 """
-
-
 class CategoryDetailView(ArticleListView):
     page_type = "分类目录归档"
 

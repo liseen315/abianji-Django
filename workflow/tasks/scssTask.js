@@ -1,13 +1,24 @@
 const postcss = require('gulp-postcss')
 const atImport = require('postcss-import')
-
 module.exports = function (gulp, plugin, pathConfig) {
-  let processors = [atImport]
+  // let processors = [atImport, require('postcss-scss')]
+
+  function callback (file) {
+    return {
+      plugins: [
+        require('postcss-import'),
+      ],
+      options: {
+        parser: require('postcss-scss')
+      }
+    }
+  }
+
   gulp.task('scss', function (done) {
     gulp
       .src(pathConfig.scssPath)
       .pipe(plugin.gulpPlumber())
-      .pipe(postcss(processors))
+      .pipe(postcss(callback))
       .pipe(
         plugin
           .gulpSass({ outputStyle: 'compressed' })
