@@ -9,4 +9,5 @@ urlpatterns = [
     path(r'article/<int:year>-<int:month>-<int:day>/<int:article_id>.html',
          views.ArticleDetailView.as_view(),
          name='detailbyid'),
+    path(r'category/<slug:category_name>.html', views.CategoryDetailView.as_view(), name='category_detail'),
 ]

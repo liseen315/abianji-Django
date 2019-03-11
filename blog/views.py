@@ -3,6 +3,7 @@ from django.conf import settings
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from .models import Article, Category, Tag
+from django.shortcuts import get_object_or_404
 import logging
 
 logger = logging.getLogger(__name__)
@@ -27,30 +28,54 @@ class ArticleListView(ListView):
         return page
 
     # 子类覆盖方法用于获取文章列表
-    def get_articleListData(self):
+    def get_queryset_data(self):
         pass
 
     def get_queryset(self):
-        value = self.get_articleListData()
+        value = self.get_queryset_data()
         return value
+
 
 """
 首页视图
 """
+
+
 class IndexView(ArticleListView):
 
-    def get_articleListData(self):
+    def get_queryset_data(self):
         article_list = Article.objects.all()
         return article_list
+
 
 """
 文章详情
 """
+
+
 class ArticleDetailView(DetailView):
     template_name = 'blog/article_detail.html'
     model = Article
     pk_url_kwarg = 'article_id'
     context_object_name = 'article'
+
+
+"""
+分类详情
+"""
+
+
+class CategoryDetailView(ArticleListView):
+    page_type = "分类目录归档"
+
+    def get_queryset_data(self):
+        slug = self.kwargs['category_name']
+        category = get_object_or_404(Category, slug=slug)
+
+        categoryname = category.name
+        self.categoryname = categoryname
+        article_list = Article.objects.filter(category__name=categoryname)
+        return article_list
 
 
 def page_not_found_view(request, exception, template_name='error.html'):
