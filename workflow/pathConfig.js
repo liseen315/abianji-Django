@@ -4,7 +4,8 @@ const pathConfig = {
   viewPath: 'templates/**/*.html',
   jsPath: 'src/scripts/**/*.js',
   scssPath: 'src/scss/**/*.scss',
-  imgPath: 'src/images/**/*'
+  imgPath: 'src/images/**/*',
+  fontPath: 'src/fonts/**/*'
 }
 
 module.exports = pathConfig
